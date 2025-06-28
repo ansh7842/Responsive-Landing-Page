@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page - BCA Project</title>
+  <link rel="stylesheet" href="Landingpage.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo">MyPortfolio</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#current">Current</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>Hello, I'm a BCA Student</h1>
+    <p>I build simple web apps using HTML, CSS, and JavaScript. This landing page is part of my internship project.</p>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>I'm currently in my 4th semester of BCA. I enjoy learning by building real web projects like To-Do lists, Calculators, and landing pages. It helps me understand how things work and gain hands-on experience.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>My Projects</h2>
+    <p>I’ve made a To-Do App with task categories and a timer, a basic Calculator using JavaScript, and a Stopwatch. Each project taught me something new — especially about DOM, layout, and responsiveness.</p>
+  </section>
+
+  <section class="section" id="current">
+    <h2>Currently Exploring</h2>
+    <p>I'm also experimenting with a basic text-to-video tool, just to understand how tools like Synthesia work behind the scenes. It's still a simple idea, but I'm learning a lot about working with UI, logic, and video concepts.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>If you want to connect or have suggestions, feel free to reach out on LinkedIn or email. I'm always open to learning something new.</p>
+  </section>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    const navLinks = document.getElementById("nav-links");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    function toggleMenu() {
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
